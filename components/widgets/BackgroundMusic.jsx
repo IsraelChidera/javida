@@ -9,31 +9,35 @@ export default function BackgroundMusic() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Start muted for autoplay policy, then unmute on interaction
+    // Try autoplay muted (many browsers allow muted autoplay)
     audio.muted = true;
-    audio.load();
+    audio.volume = 0.5;
+    audio.play().catch(() => {
+      console.log("Autoplay blocked, waiting for user interaction...");
+    });
 
+    // Unlock audio on first interaction
     const startMusic = () => {
       if (audio.paused) {
-        audio.muted = false;
-        audio.volume = 0.5;
-        audio.play().catch(() => {});
+        audio.muted = false; // unmute
+        audio.play().catch((err) => {
+          console.warn("Play failed:", err);
+        });
       }
-      window.removeEventListener("touchstart", startMusic);
-      window.removeEventListener("scroll", startMusic);
+
+      // Remove listeners after first play
       window.removeEventListener("click", startMusic);
+      window.removeEventListener("touchstart", startMusic);
       window.removeEventListener("keydown", startMusic);
     };
 
-    window.addEventListener("touchstart", startMusic, { passive: true });
-    window.addEventListener("scroll", startMusic, { passive: true });
     window.addEventListener("click", startMusic);
+    window.addEventListener("touchstart", startMusic);
     window.addEventListener("keydown", startMusic);
 
     return () => {
-      window.removeEventListener("touchstart", startMusic);
-      window.removeEventListener("scroll", startMusic);
       window.removeEventListener("click", startMusic);
+      window.removeEventListener("touchstart", startMusic);
       window.removeEventListener("keydown", startMusic);
     };
   }, []);
@@ -43,7 +47,7 @@ export default function BackgroundMusic() {
       ref={audioRef}
       src="/music.mp3"
       loop
-      style={{ display: "none" }}
+      hidden   // 👈 better than style={{ display: "none" }}
       preload="auto"
     />
   );
