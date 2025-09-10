@@ -56,17 +56,7 @@ const page = () => {
           centeredSlides={true}
           className="h-full"
         >
-          <SwiperSlide >
-            <div className="flex justify-center items-center h-full">
-              <Image
-                src="/gallery-1.jpg"
-                alt="gallery"
-                width={700}
-                height={1280}
-              />
-            </div>
 
-          </SwiperSlide>
           <SwiperSlide >
             <div className="flex justify-center items-center h-full">
               <Image
@@ -76,41 +66,7 @@ const page = () => {
                 height={1280}
               />
             </div>
-
-          </SwiperSlide>
-          <SwiperSlide >
-            <div className="flex justify-center items-center h-full">
-              <Image
-                src="/gallery-3.jpg"
-                alt="gallery"
-                width={700}
-                height={1280}
-              />
-            </div>
-
-          </SwiperSlide>
-          <SwiperSlide >
-            <div className="flex justify-center items-center h-full">
-              <Image
-                src="/gallery-4.jpg"
-                alt="gallery"
-                width={700}
-                height={1280}
-              />
-            </div>
-
-          </SwiperSlide>
-          <SwiperSlide >
-            <div className="flex justify-center items-center h-full">
-              <Image
-                src="/gallery-5.jpg"
-                alt="gallery"
-                width={700}
-                height={1280}
-              />
-            </div>
-
-          </SwiperSlide>
+          </SwiperSlide>         
           <SwiperSlide >
             <div className="flex justify-center items-center h-full">
               <Image
@@ -228,17 +184,7 @@ const page = () => {
                 height={1280}
               />
             </div>
-          </SwiperSlide>
-          <SwiperSlide >
-            <div className="flex justify-center items-center h-full">
-              <Image
-                src="/gallery-17.jpg"
-                alt="gallery"
-                width={700}
-                height={1280}
-              />
-            </div>
-          </SwiperSlide>
+          </SwiperSlide>         
           <SwiperSlide >
             <div className="flex justify-center items-center h-full">
               <Image
@@ -248,33 +194,13 @@ const page = () => {
                 height={1280}
               />
             </div>
-          </SwiperSlide>
-          <SwiperSlide >
-            <div className="flex justify-center items-center h-full">
-              <Image
-                src="/gallery-19.jpg"
-                alt="gallery"
-                width={700}
-                height={1280}
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide >
-            <div className="flex justify-center items-center h-full">
-              <Image
-                src="/gallery-20.jpg"
-                alt="gallery"
-                width={700}
-                height={1280}
-              />
-            </div>
-          </SwiperSlide>
+          </SwiperSlide>        
         </Swiper>
       </div>
 
 
       <Container className="py-[38px]">
-       
+
 
         <h2 className='text-center text-[28px] font-extrabold text-[#3E3E3E] mb-8'>
           Directions to the Venue

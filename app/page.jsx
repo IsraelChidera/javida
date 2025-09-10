@@ -2,9 +2,7 @@ import Image from "next/image";
 import Container from "@/components/elements/Container";
 import { FaCalendarDay, FaLocationDot } from "react-icons/fa6";
 import { IoIosTime } from "react-icons/io";
-
 import FloatingButton from "@/components/widgets/FloatingButton";
-import BackgroundMusic from "@/components/widgets/BackgroundMusic";
 
 export default function Home() {
   return (
@@ -14,7 +12,7 @@ export default function Home() {
       <Image src="/left-bar.png" alt="Background" width={163} height={327} className="absolute bottom-0 right-0" />
 
       <Container className="py-[38px]">
-        <div className="w-[935px] mx-auto">
+        <div className="lg:w-[935px] mx-auto">
           <h2 className="text-center text-[20px] font-bold pt-20 text-[#3E3E3E] leading-[140%]">
             The Families of Osuji Odi Nweze of Amenu Uburu And Late Onyiba Dandy Igwe-Omoke Of Amankpuma Okposi Okwu, both in Ohaozara Local Government Area of Ebonyi State Cordially invite YOU to the traditional marriage of their children - Ms. Chidiebere Nweze & Dr. Nnaemeka Igwe-Omoke
           </h2>
@@ -24,14 +22,14 @@ export default function Home() {
           <Image src="/header2.png" alt="header" width={697} height={439} />
         </div>
 
-        <div className="w-[662px] mx-auto">
+        <div className="lg:w-[662px] mx-auto">
           <p className="pb-[27px] border-b border-dashed mt-[55px] text-center text-[24px] text-[#3E3E3E] ">
             <span className="font-bold">Colours of the day: </span>
             <span className="font-normal">Navy blue & Gold</span>
           </p>
 
           <div className="mt-[27px] flex justify-center">
-            <div className="flex justify-between w-[662px] mx-auto">
+            <div className="lg:flex justify-between lg:w-[662px] mx-auto lg:space-y-0 space-y-4">
               <div className="flex items-center space-x-2">
                 <FaLocationDot className="text-primary text-[24px]" />
                 <p className="text-[20px] text-[#3E3E3E]">
@@ -61,7 +59,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-5 w-[662px] mx-auto">
+          <div className="mt-5 lg:w-[662px] mx-auto">
             <p className="font-light text-center text-[20px] text-[#3E3E3E] leading-[140%]">
               JOINT LIFE CHRISTIAN CENTER, ADEYERI OWUYE STREET, BEHIND ZENITH BANK,
               BENSON BUS-STOP, IKORODU, LAGOS.
