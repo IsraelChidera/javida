@@ -23,7 +23,7 @@ export default function Home() {
         </div>
 
         <div className="lg:w-[662px] mx-auto">
-          <p className="pb-[27px] text-base lg:text-sm border-b border-dashed mt-[55px] text-center text-[24px] text-[#3E3E3E] ">
+          <p className="pb-[27px] border-b border-dashed mt-[55px] text-center text-base lg:text-[24px] text-[#3E3E3E] ">
             <span className="font-bold">Colours of the day: </span>
             <span className="font-normal">Navy blue & Gold</span>
           </p>

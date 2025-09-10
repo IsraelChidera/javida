@@ -5,36 +5,46 @@ import { useEffect, useRef } from "react";
 export default function BackgroundMusic() {
   const audioRef = useRef(null);
 
-  const startMusic = () => {
-    const audio = audioRef.current;
-    if (audio) {
-      audio.volume = 0.5;
-      audio.play().catch(() => {
-        console.log("Autoplay blocked until user interacts.");
-      });
-    }
-  };
-
   useEffect(() => {
-    // Handler to start music on first user interaction (touch, scroll, click, keydown)
-    const resumeOnUserAction = () => {
-      startMusic();
-      window.removeEventListener("touchstart", resumeOnUserAction);
-      window.removeEventListener("scroll", resumeOnUserAction);
-      window.removeEventListener("click", resumeOnUserAction);
-      window.removeEventListener("keydown", resumeOnUserAction);
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    // Start muted for autoplay policy, then unmute on interaction
+    audio.muted = true;
+    audio.load();
+
+    const startMusic = () => {
+      if (audio.paused) {
+        audio.muted = false;
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+      }
+      window.removeEventListener("touchstart", startMusic);
+      window.removeEventListener("scroll", startMusic);
+      window.removeEventListener("click", startMusic);
+      window.removeEventListener("keydown", startMusic);
     };
-    window.addEventListener("touchstart", resumeOnUserAction, { passive: true });
-    window.addEventListener("scroll", resumeOnUserAction, { passive: true });
-    window.addEventListener("click", resumeOnUserAction);
-    window.addEventListener("keydown", resumeOnUserAction);
+
+    window.addEventListener("touchstart", startMusic, { passive: true });
+    window.addEventListener("scroll", startMusic, { passive: true });
+    window.addEventListener("click", startMusic);
+    window.addEventListener("keydown", startMusic);
+
     return () => {
-      window.removeEventListener("touchstart", resumeOnUserAction);
-      window.removeEventListener("scroll", resumeOnUserAction);
-      window.removeEventListener("click", resumeOnUserAction);
-      window.removeEventListener("keydown", resumeOnUserAction);
+      window.removeEventListener("touchstart", startMusic);
+      window.removeEventListener("scroll", startMusic);
+      window.removeEventListener("click", startMusic);
+      window.removeEventListener("keydown", startMusic);
     };
   }, []);
 
-  return <audio ref={audioRef} src="/music.mp3" loop hidden />;
+  return (
+    <audio
+      ref={audioRef}
+      src="/music.mp3"
+      loop
+      style={{ display: "none" }}
+      preload="auto"
+    />
+  );
 }
