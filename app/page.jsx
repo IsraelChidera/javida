@@ -7,13 +7,13 @@ import FloatingButton from "@/components/widgets/FloatingButton";
 export default function Home() {
   return (
     <main className="bg-[url('/bg.png')] bg-[#FFFCEF] bg-cover min-h-screen relative">
-    
+
       <Image src="/right-palms.png" alt="Background" width={256} height={726} className="absolute top-0 left-0" />
       <Image src="/left-bar.png" alt="Background" width={163} height={327} className="absolute bottom-0 right-0" />
 
       <Container className="py-[38px]">
         <div className="lg:w-[935px] mx-auto">
-          <h2 className="text-center text-[20px] font-bold pt-20 text-[#3E3E3E] leading-[140%]">
+          <h2 style={{ textShadow: "1px 1px 2px white" }} className="text-center text-[20px] font-bold pt-20 text-[#3E3E3E] leading-[140%]">
             The Families of Osuji Odi Nweze of Amenu Uburu And Late Onyiba Dandy Igwe-Omoke Of Amankpuma Okposi Okwu, both in Ohaozara Local Government Area of Ebonyi State Cordially invite YOU to the traditional marriage of their children - Ms. Chidiebere Nweze & Dr. Nnaemeka Igwe-Omoke
           </h2>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       </Container>
 
-  <FloatingButton />
+      <FloatingButton />
     </main>
   );
 }
