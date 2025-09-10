@@ -2,11 +2,14 @@ import Image from "next/image";
 import Container from "@/components/elements/Container";
 import { FaCalendarDay, FaLocationDot } from "react-icons/fa6";
 import { IoIosTime } from "react-icons/io";
+
 import FloatingButton from "@/components/widgets/FloatingButton";
+import BackgroundMusic from "@/components/widgets/BackgroundMusic";
 
 export default function Home() {
   return (
     <main className="bg-[url('/bg.png')] bg-[#FFFCEF] bg-cover min-h-screen relative">
+    
       <Image src="/right-palms.png" alt="Background" width={256} height={726} className="absolute top-0 left-0" />
       <Image src="/left-bar.png" alt="Background" width={163} height={327} className="absolute bottom-0 right-0" />
 
@@ -72,7 +75,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <FloatingButton />
+  <FloatingButton />
     </main>
   );
 }
