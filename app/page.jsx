@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <footer className="text-center lg:p-4 p-2 mt-4">
+      <footer className="relative z-50 text-center lg:p-4 p-2 mt-4">
         <p className="text-sm lg:text-base">
           Designed and developed by <a href="https://www.linkedin.com/in/israel-chidera-97bbab89/" target="_blank" className="underline-offset-4 underline hover:no-underline">Israel Chidera</a> with ❤️
         </p>
