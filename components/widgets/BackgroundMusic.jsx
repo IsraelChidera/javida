@@ -16,13 +16,21 @@ export default function BackgroundMusic() {
   };
 
   useEffect(() => {
-    startMusic();
-
-    const resumeOnUserAction = () => startMusic();
+    // Handler to start music on first user interaction (touch, scroll, click, keydown)
+    const resumeOnUserAction = () => {
+      startMusic();
+      window.removeEventListener("touchstart", resumeOnUserAction);
+      window.removeEventListener("scroll", resumeOnUserAction);
+      window.removeEventListener("click", resumeOnUserAction);
+      window.removeEventListener("keydown", resumeOnUserAction);
+    };
+    window.addEventListener("touchstart", resumeOnUserAction, { passive: true });
+    window.addEventListener("scroll", resumeOnUserAction, { passive: true });
     window.addEventListener("click", resumeOnUserAction);
     window.addEventListener("keydown", resumeOnUserAction);
-
     return () => {
+      window.removeEventListener("touchstart", resumeOnUserAction);
+      window.removeEventListener("scroll", resumeOnUserAction);
       window.removeEventListener("click", resumeOnUserAction);
       window.removeEventListener("keydown", resumeOnUserAction);
     };
