@@ -17,7 +17,7 @@ export default function Home() {
       <Container className="py-[38px]">
         <div className="lg:w-[935px] mx-auto">
           <h2 style={{ textShadow: "1px 1px 2px white" }} className="text-center text-base lg:text-[20px] font-bold pt-20 text-[#3E3E3E] leading-[140%]">
-            The Families of Osuji Odi Nweze of Amenu Uburu And Late Onyiba Dandy Igwe-Omoke Of Amankpuma Okposi Okwu, both in Ohaozara Local Government Area of Ebonyi State Cordially invite YOU to the traditional marriage of their children - Ms. Chidiebere Nweze & Dr. Nnaemeka Igwe-Omoke
+            Families of Pastor ROMANUS NWEKE of UMUCHE- UGWULANGWU OF OHAOZARA LGA IN EBONYI STATE, and Mr ECHENDU FRANCIS OF UMUDIM OF NNEWI NORTH LGA IN ANAMBRA STATE
           </h2>
         </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <footer className="text-center p-4 mt-4">
+      <footer className="text-center lg:p-4 p-2 mt-4">
         <p className="text-sm lg:text-base">
           Designed and developed by <a href="https://www.linkedin.com/in/israel-chidera-97bbab89/" target="_blank" rel="noopener noreferrer" className="underline-offset-4 underline hover:no-underline">Israel Chidera</a> with ❤️
         </p>
