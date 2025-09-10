@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Container from "@/components/elements/Container";
+import Container from "../components/elements/Container";
 import { FaCalendarDay, FaLocationDot } from "react-icons/fa6";
 import { IoIosTime } from "react-icons/io";
-import FloatingButton from "@/components/widgets/FloatingButton";
+import FloatingButton from "../components/widgets/FloatingButton";
 
 export default function Home() {
   return (
