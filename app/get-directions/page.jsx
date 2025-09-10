@@ -245,7 +245,7 @@ const page = () => {
 
         <footer className="text-center p-4 mt-4">
           <p className="text-sm lg:text-base">
-            Designed and developed by <a href="https://www.linkedin.com/in/israel-chidera-97bbab89/" target="_blank" rel="noopener noreferrer" className="underline-offset-4 underline hover:no-underline">Israel Chidera</a> with ❤️
+            Designed and developed by <a href="https://www.linkedin.com/in/israel-chidera-97bbab89/" target="_blank" className="underline-offset-4 underline hover:no-underline">Israel Chidera</a> with ❤️
           </p>
         </footer>
       </Container>

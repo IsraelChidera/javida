@@ -16,12 +16,12 @@ export default function Home() {
 
       <Container className="py-[38px]">
         <div className="lg:w-[935px] mx-auto">
-          <h2 style={{ textShadow: "1px 1px 2px white" }} className="text-center text-base lg:text-[20px] font-bold pt-20 text-[#3E3E3E] leading-[140%]">
+          <h2 style={{ textShadow: "1px 1px 2px white" }} className="text-center text-[18px] lg:text-[20px] font-bold pt-20 text-[#3E3E3E] leading-[140%]">
             Families of Pastor ROMANUS NWEKE of UMUCHE- UGWULANGWU OF OHAOZARA LGA IN EBONYI STATE, and Mr ECHENDU FRANCIS OF UMUDIM OF NNEWI NORTH LGA IN ANAMBRA STATE
           </h2>
         </div>
 
-        <div className="flex items-center justify-center w-full">
+        <div className="flex items-center justify-center w-full lg:mt-0 mt-10">
           <Image src="/header2.png" alt="header" width={697} height={439} />
         </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
 
       <footer className="text-center lg:p-4 p-2 mt-4">
         <p className="text-sm lg:text-base">
-          Designed and developed by <a href="https://www.linkedin.com/in/israel-chidera-97bbab89/" target="_blank" rel="noopener noreferrer" className="underline-offset-4 underline hover:no-underline">Israel Chidera</a> with ❤️
+          Designed and developed by <a href="https://www.linkedin.com/in/israel-chidera-97bbab89/" target="_blank" className="underline-offset-4 underline hover:no-underline">Israel Chidera</a> with ❤️
         </p>
       </footer>
       <FloatingButton />
