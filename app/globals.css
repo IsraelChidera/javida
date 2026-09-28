@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* ---------- Design tokens ---------- */
 @theme {
   --color-navy-950: #0e1433;
   --color-navy-900: #151d45;
@@ -33,7 +32,6 @@
   }
 }
 
-/* ---------- Base ---------- */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -60,7 +58,6 @@
   }
 }
 
-/* ---------- Components ---------- */
 @layer components {
   .eyebrow {
     @apply font-sans text-[11px] font-semibold uppercase tracking-[0.35em] text-gold-600;
@@ -80,8 +77,7 @@
     background-clip: text;
     color: transparent;
   }
-
-  /* Scroll-reveal; toggled by <Reveal /> */
+  
   .reveal {
     opacity: 0;
     transform: translateY(24px);
